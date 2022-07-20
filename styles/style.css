@@ -29,10 +29,11 @@ body{
     
 }
 .greatest-show button{
-    background-color: yellow;
+    background-color: orange;
     padding: 16px 25px;
     font-size: 20px;
     border-radius: 10px;
+    color: white;
 }
 .top-image img{
     height: 613px;
@@ -69,7 +70,7 @@ body{
     color: #161616;
 }
 .sidebar .active button{
-    background-color: red;
+    background-color: orange;
 }
 .sidebar .active button a{
     color: white;
@@ -82,6 +83,9 @@ body{
 .blog{
     border: 1px solid gray;
     border-radius: 10px;
+}
+.blog .thumbnail img{
+    width: 100%;
 }
 .blog .blog-details{
     padding: 10px;
@@ -100,8 +104,215 @@ body{
 /* footer section styles  */
 .footer{
     background-color: black;
-    
+    padding: 100px;
+    margin-top: 100px;
 }
 .footer .goal h1{
     color: white;
+    text-align: center;
+    border-bottom: 1px solid white;
+    border-width: 10%;
+    padding-bottom: 30px;
+}
+
+.footer .footer-menu nav ul{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+}
+.footer .footer-menu nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsive - Media Queries*/
+
+/* Mobile devices */
+@media screen and (max-width: 688px){
+    .top-section{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+    }
+    .greatest-show h1{
+        font-size: 22px;
+        line-height: 40px;
+        text-align: center;
+    } 
+    .greatest-show p{
+        text-align: center;
+        font-size: 14px;
+        padding: 10px;
+        white-space: nowrap; 
+        width: 320px; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+    .greatest-show .top-button{
+        text-align: center;
+    }
+    .greatest-show .top-button button{
+        padding: 8px 12px;
+    }
+    .top-image img{
+        width: 233px;
+        height: 245px;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    /* blog section styles  */
+
+    .blog-section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 30px;
+    }
+    .sidebar{
+        display: grid;
+        background-color: white;
+        width: 332px;
+        height: 312px;
+    }
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer{
+        background-color: black;
+        padding: 20px;
+        
+    }
+    .footer .footer-menu nav ul{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        padding: 0;
+    }
+    .footer .footer-menu nav ul li a{
+        text-decoration: none;
+        color: #B9B9B9;
+    }
+
+}
+/* tablet devices */
+
+@media screen and (min-width:689px) and (max-width:992px){
+    .greatest-show h1{
+        font-size: 40px;
+        line-height: 50px;
+       
+    } 
+    .greatest-show p{
+        font-size: 14px;
+    }
+    
+    .top-image img{
+        width: 323px;
+        height: 340px;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .greatest-show .top-button button{
+        padding: 10px 15px;
+    }
+
+    .blog-section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 0px;
+    }
+    .sidebar{
+        display: flex;
+        background-color: white;
+        justify-content: space-between;
+        height: 200px;
+    }
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer .footer-menu nav ul{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0
+    }
+}
+
+/* Tablet Button Style */
+
+.tab-button{
+    text-align: center;
+    margin-top: 50px;
+}
+.tab-button button{
+    background-color: orange;
+    padding: 10px 25px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+/* hide button on mobile  */
+
+@media screen and (max-width: 688px){
+    .button-for-tablet{
+        display: none;
+    }
+}
+
+/* hide button on laptop  */
+@media screen and (min-width: 993px){
+    .button-for-tablet{
+        display: none;
+    }
+}
+
+/* upcoming match page styles  */
+.matches{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+.match{
+    background-color: aliceblue;
+    height: 242px;
+    padding-top: 20px;
+    border: 1px solid #161616;
+    border-radius: 10px;
+    
+}
+.competitors{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 50px;
+    justify-items: center;
+}
+.match-info h3, .match-info p{
+    text-align: center;
+}
+
+/* matches section responsiveness for mobile devices  */
+
+@media screen and (max-width: 688px){
+    .matches{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 30px;
+    }
+}
+
+/* matches section responsiveness for Tablet devices  */
+@media screen and (min-width:689px) and (max-width:992px){
+    .matches{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 30px;
+    }
 }
