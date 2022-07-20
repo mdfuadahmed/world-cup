@@ -38,6 +38,11 @@ body{
 .top-image img{
     height: 613px;
     width: 581px;
+    transition: transform 1s ease-out;
+}
+/* top image animation */
+.top-section:hover .top-image img{
+    transform: translate(-70px, -10px);
 }
 
 /* blog section styles  */
@@ -141,6 +146,8 @@ body{
 
 /* Mobile devices */
 @media screen and (max-width: 688px){
+    
+    /* top section's styles for mobile devices  */
     .top-section{
         width: 100%;
         display: grid;
@@ -174,7 +181,7 @@ body{
         margin-top: 30px;
     }
 
-    /* blog section styles  */
+     /* Blog section's styles for mobile devices  */
 
     .blog-section{
         display: grid;
@@ -192,6 +199,7 @@ body{
         grid-template-columns: repeat(1, 1fr);
     }
 
+     /* Footer styles for mobile devices  */
     .footer{
         background-color: black;
         padding: 20px;
@@ -213,6 +221,8 @@ body{
 /* tablet devices */
 
 @media screen and (min-width:689px) and (max-width:992px){
+    
+     /* top section's styles for Tablet  */
     .greatest-show h1{
         font-size: 40px;
         line-height: 50px;
@@ -232,6 +242,7 @@ body{
         padding: 10px 15px;
     }
 
+     /* Blog section's styles for Tablet  */
     .blog-section{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -247,6 +258,9 @@ body{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+     /* Footer styles for Tablet  */
+
     .footer .footer-menu nav ul{
         margin-top: 20px;
         display: grid;
@@ -319,7 +333,7 @@ body{
     }
 }
 
-/* matches section responsiveness for Tablet devices  */
+/* matches section responsiveness for Tablet   */
 @media screen and (min-width:689px) and (max-width:992px){
     .matches{
         display: grid;
