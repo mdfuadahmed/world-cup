@@ -42,7 +42,7 @@ body{
 }
 /* top image animation */
 .top-section:hover .top-image img{
-    transform: translate(-70px, -10px);
+    transform: translate(-50px, -10px);
 }
 
 /* blog section styles  */
